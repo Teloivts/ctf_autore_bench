@@ -62,15 +62,11 @@ pip install -r requirements.txt
 
 **终端 A (启动 MCP Server)**： 启动 IDA 的 headless 模式作为服务端。
 
-Bash
-
 ```
 uv run idalib-mcp --host 127.0.0.1 --port 8745 misc/EasyVM.exe
 ```
 
 **终端 B (启动 Client/Agent)**： 运行测试脚本。
-
-Bash
 
 ```
 python ida_agent_test.py
