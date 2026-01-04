@@ -24,8 +24,8 @@
 
 - **OS**: Windows 10
 - **Python**: 3.12
-- **IDA Pro**: 9.0 SP1 (必需，需配合 `idalib`)
-- **API**: DeepSeek API (或其他兼容 OpenAI 格式的 API)
+- **IDA Pro**: 9.0 SP1
+- **API**: DeepSeek-V3.2 (API model: deepseek-reasoner) 
 
 ## 🚀 快速开始
 
@@ -88,3 +88,8 @@ python ida_agent_test.py
 - **入门测试**：`misc/main.exe` (较为简单)
   - Flag: `flag{f2e6c420-5d8f-4a9e-8ecd-c08c1a5f8238}`
 - **进阶测试**：`misc/EasyVM.exe`
+
+------
+
+*该 README 由 Gemini 3 pro润色整理*
+
