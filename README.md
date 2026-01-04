@@ -33,8 +33,6 @@
 
 在运行之前，请确保已配置环境变量 `DEEPSEEK_API_KEY`：
 
-PowerShell
-
 ```
 # Windows PowerShell 示例
 $env:DEEPSEEK_API_KEY="sk-your-key-here"
@@ -44,8 +42,6 @@ $env:DEEPSEEK_API_KEY="sk-your-key-here"
 
 ### 2. 安装依赖
 
-Bash
-
 ```
 pip install -r requirements.txt
 ```
@@ -54,7 +50,11 @@ pip install -r requirements.txt
 
 请参考 Hex-Rays 官方文档配置 `idalib`： 🔗 [IDA Lib User Guide](https://docs.hex-rays.com/user-guide/idalib)
 
-> **故障排除**：如果安装 `idalib` 后遇到问题，请优先检查报错信息，并核对对应路径下的 `ida-config.json` 配置文件是否正确。
+**⚠️ 故障排除与常见问题**：
+
+> **版本依赖报错**：如果遇到 `idapromcp` 相关报错提示需要 `>=0.0.7` 版本，请手动打开项目中的 `setup.py` 文件，将 `version` 字段修改为 `0.0.7` 即可解决。
+>
+> **路径配置**：如果安装后仍有问题，请优先检查对应路径下的 `ida-config.json` 配置文件是否正确指向了 IDA 安装目录。
 
 ### 4. 启动测试
 
@@ -78,7 +78,7 @@ python ida_agent_test.py
 
 ## ⚠️ 安全与免责声明
 
-> [!WARNING] **高风险警告：无沙盒环境** 本项目中的 Python 执行接口**目前没有接入任何沙盒环境**。 `ida_agent_test.py` 会直接在您的宿主机上执行代码。请**绝对不要**在生产环境或含有敏感数据的机器上运行不可信的二进制文件或模型生成的代码。
+> **高风险警告：无沙盒环境** 本项目中的 Python 执行接口**目前没有接入任何沙盒环境**。 `ida_agent_test.py` 会直接在您的宿主机上执行代码。请**绝对不要**在生产环境或含有敏感数据的机器上运行不可信的二进制文件或模型生成的代码。
 
 - `ida_agent_test.py` 目前主要用于测试静态分析工具的调用。
 - 本项目仅供安全研究与学术交流使用。
