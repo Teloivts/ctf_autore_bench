@@ -1,0 +1,4 @@
+openai==1.109.1
+mcp==1.25.0
+uv==0.8.12
+git+https://github.com/Teloivts/ida-pro-mcp.git#egg=ida-pro-mcp
